@@ -1,0 +1,75 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body{
+  font-family: 'Lato', sans-serif;
+  background: #EDEFF0
+}
+
+.wrapper {
+  width: 60%;
+  max-width: 1140px;
+  margin: auto;
+
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+.main_header {
+  width: 100%;
+  margin: auto;
+  background: #ffffff;
+  #logo {
+    float: left;
+    a{
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: -1px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: #397CAC;
+    }
+  }
+}
+
+#buttons{
+  float: right;
+  a{
+    line-height: 60px;
+    background: #397CAC;
+    padding: .5em 1em;
+    border-radius: 0.2em;
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+  }
+
+}

@@ -1,0 +1,27 @@
+!!!
+%html
+%head
+ %title Abhijit's Recipe Box
+ = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+ %link{href: "https://fonts.googleapis.com/css?family=Lato" , rel: "stylesheet"}
+ %link{href: "https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" , rel: "stylesheet"}
+ = javascript_include_tag 'application', 'data-turbolinks-track' => true
+ = csrf_meta_tags
+%body
+ %header.main_header.clearfix
+  .wrapper
+   #logo
+    %p= link_to "Abhijit's Recipe Box", root_path
+   #buttons
+    - if user_signed_in?
+     = link_to "New Recipe", new_recipe_path
+     = link_to "Logout", destroy_user_session_path, method: :delete
+    - else
+     = link_to "Sign up", new_user_registration_path
+     = link_to "Sign in", new_user_session_path
+.wrapper
+ %p.notice= notice
+ %p.alert= alert
+
+ .wrapper
+ = yield
