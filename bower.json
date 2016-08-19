@@ -1,0 +1,18 @@
+{
+  "name": "recipe_box_app",
+  "authors": [
+    "abhijit kalta <abhijitkalta@gmail.com>"
+  ],
+  "description": "A recipes portal using rails",
+  "main": "application.html.haml",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ]
+}
